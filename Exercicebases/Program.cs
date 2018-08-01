@@ -21,12 +21,12 @@ namespace Exercicebases
         static void AfficheFor(int a, int b)
         {
             if (a < b)
-                for (int i = a+1; i < b; i++)
+                for (int i = a + 1; i < b; i++)
                 {
                     Console.WriteLine("For : " + i);
                 }
             else
-                for (int i = a-1; i > b; i--)
+                for (int i = a - 1; i > b; i--)
                 {
                     Console.WriteLine("For : " + i);
                 }
@@ -35,12 +35,12 @@ namespace Exercicebases
         {
             int ab = a;
             if (a < b)
-                while (ab < b-1)
+                while (ab < b - 1)
                 {
                     Console.WriteLine("While : " + ++ab);
                 }
             else
-                while (ab > b+1)
+                while (ab > b + 1)
                 {
                     Console.WriteLine("While : " + --ab);
                 }
@@ -49,19 +49,25 @@ namespace Exercicebases
         {
             int ab = a;
             if (a < b)
+            {
                 do
                 {
                     Console.WriteLine("Do While : " + ++ab);
                 } while (ab < b - 1);
-            else if (b > a)
+            }
+            else if (a > b)
+            {
                 do
                 {
                     Console.WriteLine("Do While : " + --ab);
                 } while (ab > b + 1);
-            else
+            }
+            else if (a == b)
             {
-                Console.WriteLine("Il n'y pas d'écart");
-            };
+                {
+                    Console.WriteLine("Il n'y pas d'écart");
+                };
+            }
         }
     }
 }
