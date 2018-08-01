@@ -18,15 +18,15 @@ namespace Exercicebases
             AfficheDoWhile(a, b);
 
         }
-        static void AfficheFor(int a,int b)
+        static void AfficheFor(int a, int b)
         {
-            if(a<b)
-            for (int i = a;i <= b;i++)
-            {
-                Console.WriteLine("For : "+i);
-            }
+            if (a < b)
+                for (int i = a+1; i < b; i++)
+                {
+                    Console.WriteLine("For : " + i);
+                }
             else
-                for (int i = a; i >= b; i--)
+                for (int i = a-1; i > b; i--)
                 {
                     Console.WriteLine("For : " + i);
                 }
@@ -35,34 +35,34 @@ namespace Exercicebases
         {
             int ab = a;
             if (a < b)
-                while (ab <= b)
+                while (ab < b-1)
                 {
-                    Console.WriteLine("While : " + ab);
                     ab++;
+                    Console.WriteLine("While : " + ab);
+                    //ab++;
                 }
             else
-                while (ab >= b)
+                while (ab > b+1)
                 {
-                    Console.WriteLine("While : " + ab);
                     ab--;
+                    Console.WriteLine("While : " + ab);
                 }
         }
-
-        static void AfficheDoWhile(int a,int b)
+        static void AfficheDoWhile(int a, int b)
         {
             int ab = a;
             if (a < b)
                 do
-            {
-                Console.WriteLine("Do While : " + ab);
-                ab++;
-            } while (ab <= b);
+                {
+                    ab++;
+                    Console.WriteLine("Do While : " + ab);
+                } while (ab < b-1);
             else
                 do
                 {
-                    Console.WriteLine("Do While : " + ab);
                     ab--;
-                } while (ab >= b);
+                    Console.WriteLine("Do While : " + ab);
+                } while (ab > b+1);
         }
     }
 }
