@@ -37,15 +37,12 @@ namespace Exercicebases
             if (a < b)
                 while (ab < b-1)
                 {
-                    ab++;
-                    Console.WriteLine("While : " + ab);
-                    //ab++;
+                    Console.WriteLine("While : " + ++ab);
                 }
             else
                 while (ab > b+1)
                 {
-                    ab--;
-                    Console.WriteLine("While : " + ab);
+                    Console.WriteLine("While : " + --ab);
                 }
         }
         static void AfficheDoWhile(int a, int b)
@@ -54,15 +51,17 @@ namespace Exercicebases
             if (a < b)
                 do
                 {
-                    ab++;
-                    Console.WriteLine("Do While : " + ab);
-                } while (ab < b-1);
-            else
+                    Console.WriteLine("Do While : " + ++ab);
+                } while (ab < b - 1);
+            else if (b > a)
                 do
                 {
-                    ab--;
-                    Console.WriteLine("Do While : " + ab);
-                } while (ab > b+1);
+                    Console.WriteLine("Do While : " + --ab);
+                } while (ab > b + 1);
+            else
+            {
+                Console.WriteLine("Il n'y pas d'écart");
+            };
         }
     }
 }
